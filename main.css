@@ -13,33 +13,20 @@ body {
 a {
   text-decoration: none;
   color: #2F4F4F;
-  font-weight: 700;
 }
 
 .page {
   font-family: Arial, sans-serif;
 }
 .page__catalog {
-  margin: 0 auto;
   padding: 30px 35px;
-  width: 200px;
-}
-@media (min-width: 500px) {
-  .page__catalog {
-    width: 500px;
-  }
-}
-@media (min-width: 1000px) {
-  .page__catalog {
-    width: 960px;
-  }
 }
 
 .catalog {
   display: grid;
   grid-template-columns: repeat(var(--column-count), 200px);
-  column-gap: 30px;
-  row-gap: 40px;
+  justify-content: center;
+  gap: 40px 30px;
 }
 @media (min-width: 500px) {
   .catalog {
@@ -71,8 +58,7 @@ a {
   position: absolute;
   background-color: #eee;
   box-shadow: 0 0 0 10px #eee;
-  height: 287px;
-  font-size: 18px;
+  height: 270px;
   transform: scale(1.2);
   z-index: 2;
 }
@@ -84,8 +70,7 @@ a {
 }
 .card__img {
   width: 200px;
-  height: 200px;
-  border-radius: 200px;
+  border-radius: 50%;
   transition: border-radius 1s;
 }
 .card__rank {
@@ -94,11 +79,15 @@ a {
   right: 10px;
   width: 32px;
   height: 32px;
-  border-radius: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #fff;
   color: #8B0000;
-  text-align: center;
-  line-height: 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
 }
 .card__details {
   position: relative;
@@ -106,9 +95,18 @@ a {
 .card__name {
   display: block;
   margin-bottom: 9px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
 }
 .card__extra {
   display: block;
+  margin-bottom: 6px;
+  font-size: 18px;
+  line-height: 21px;
+}
+.card__sport::after {
+  content: ",";
 }
 .card__pay::before {
   content: "$";

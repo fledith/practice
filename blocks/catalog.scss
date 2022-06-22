@@ -1,8 +1,8 @@
 .catalog {
   display: grid;
   grid-template-columns: repeat(var(--column-count), $card-width);
-  column-gap: $column-gap;
-  row-gap: $row-gap;
+  justify-content: center;
+  gap: $row-gap $column-gap;
 
   @media (min-width: 500px) {
     --column-count: 2;
