@@ -1,0 +1,17 @@
+.page {
+  font-family: Arial, sans-serif;
+
+  &__catalog {
+    margin: 0 auto;
+    padding: 30px 35px;
+    width: $card-width;
+
+    @media (min-width: 500px) {
+      width: $card-width * 2 + $column-gap + 70px;
+    }
+
+    @media (min-width: 1000px) {
+      width: $card-width * 4 + $column-gap * 3 + 70px;
+    }
+  }
+}

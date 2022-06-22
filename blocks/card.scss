@@ -1,0 +1,78 @@
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+
+  height: 231px;
+  overflow: hidden;
+
+  text-align: center;
+  cursor: pointer;
+  transition: transform 1s;
+
+  &:hover {
+    position: absolute;
+    background-color: #eee;
+    box-shadow: 0 0 0 10px #eee;
+    height: 287px;
+    font-size: 18px;
+    transform: scale(1.2);
+    z-index: 2;
+  }
+
+  &:hover &__img {
+    border-radius: 60px;
+  }
+
+  &__photo {
+    margin-bottom: 8px;
+  }
+
+  &__img {
+    width: $card-width;
+    height: $card-width;
+    border-radius: $card-width;
+    transition: border-radius 1s;
+  }
+
+  &__rank {
+    position: absolute;
+    top: 84px;
+    right: 10px;
+
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+
+    background: #fff;
+    color: $c-brown;
+    text-align: center;
+    line-height: 32px;
+  }
+
+  &__details {
+    position: relative;
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 9px;
+  }
+
+  &__extra {
+    display: block;
+  }
+
+  &__pay {
+    &::before {
+      content: "$";
+    }
+
+    &::after {
+      content: "M";
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), $card-width);
+  column-gap: $column-gap;
+  row-gap: $row-gap;
+
+  @media (min-width: 500px) {
+    --column-count: 2;
+  }
+  
+  @media (min-width: 1000px) {
+    --column-count: 4;
+  }
+
+  &__container {
+    position: relative;
+  }
+}

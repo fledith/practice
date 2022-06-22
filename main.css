@@ -1,0 +1,120 @@
+:root {
+  --column-count: 1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2F4F4F;
+  font-weight: 700;
+}
+
+.page {
+  font-family: Arial, sans-serif;
+}
+.page__catalog {
+  margin: 0 auto;
+  padding: 30px 35px;
+  width: 200px;
+}
+@media (min-width: 500px) {
+  .page__catalog {
+    width: 500px;
+  }
+}
+@media (min-width: 1000px) {
+  .page__catalog {
+    width: 960px;
+  }
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), 200px);
+  column-gap: 30px;
+  row-gap: 40px;
+}
+@media (min-width: 500px) {
+  .catalog {
+    --column-count: 2;
+  }
+}
+@media (min-width: 1000px) {
+  .catalog {
+    --column-count: 4;
+  }
+}
+.catalog__container {
+  position: relative;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  height: 231px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 1s;
+}
+.card:hover {
+  position: absolute;
+  background-color: #eee;
+  box-shadow: 0 0 0 10px #eee;
+  height: 287px;
+  font-size: 18px;
+  transform: scale(1.2);
+  z-index: 2;
+}
+.card:hover .card__img {
+  border-radius: 60px;
+}
+.card__photo {
+  margin-bottom: 8px;
+}
+.card__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  transition: border-radius 1s;
+}
+.card__rank {
+  position: absolute;
+  top: 84px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  background: #fff;
+  color: #8B0000;
+  text-align: center;
+  line-height: 32px;
+}
+.card__details {
+  position: relative;
+}
+.card__name {
+  display: block;
+  margin-bottom: 9px;
+}
+.card__extra {
+  display: block;
+}
+.card__pay::before {
+  content: "$";
+}
+.card__pay::after {
+  content: "M";
+}
+
+/*# sourceMappingURL=main.css.map */
